@@ -1,5 +1,4 @@
 # Stock Market Sentiment Analysis using RNN
-
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
 [![Keras](https://img.shields.io/badge/Keras-2.x-red.svg)](https://keras.io/)
@@ -36,6 +35,13 @@ The project uses a stock market sentiment dataset (`stock_data.csv`) with two co
 - `text`: The stock market-related text
 - `sentiment`: The sentiment label (-1 for Negative, 1 for Positive)
 
+### Data Distribution
+- Total samples: 5791
+- Positive sentiment: 3641 (62.87%)
+- Negative sentiment: 2150 (37.13%)
+
+This distribution shows that the dataset is slightly imbalanced, with more positive sentiment samples than negative ones.
+
 ## Data Preprocessing
 1. **Text Cleaning**: 
    - Regular expression: `@\S+|https?:\S+|http?:\S|[^A-Za-z0-9]+`
@@ -49,7 +55,7 @@ The project uses a stock market sentiment dataset (`stock_data.csv`) with two co
 ## Model Architecture
 The model uses an RNN architecture with the following components:
 1. **Embedding Layer**: 
-   - Input dimension: vocab_size (determined dynamically)
+   - Input dimension: 7947 (vocabulary size)
    - Output dimension: 300 (EMBEDDING_DIM)
    - Input length: 30 (MAX_SEQUENCE_LENGTH)
 2. **LSTM Layer**: 
@@ -61,7 +67,7 @@ The model uses an RNN architecture with the following components:
    - Activation: sigmoid
 
 ## Training Process
-1. **Data Split**: 80% training, 20% testing
+1. **Data Split**: 80% training (4632 samples), 20% testing (1159 samples)
 2. **Tokenization**: Using Keras Tokenizer
 3. **Label Encoding**: Using sklearn's LabelEncoder
 4. **Model Compilation**: 
@@ -74,17 +80,42 @@ The model uses an RNN architecture with the following components:
    - Validation split: 0.1
    - Uses ModelCheckpoint to save the best model
 
-## Evaluation Metrics
-- Accuracy
-- Loss
-- (Additional metrics like Precision, Recall, and F1-Score can be implemented)
+## Results and Evaluation
 
-## Visualization Techniques
-1. **Sentiment Distribution**: Bar plot using matplotlib
-2. **Word Clouds**: Separate visualizations for positive and negative sentiments
-3. **Training History**: Plot of accuracy and loss over epochs
+### Training History
+- The model was trained for 10 epochs
+- Best validation accuracy: 0.76509 (achieved in the final epoch)
+- Training accuracy reached 0.9549 in the final epoch
 
+### Model Performance
+- **Test Loss**: 0.5132
+- **Test Accuracy**: 0.7938 (79.38%)
+
+### Training Visualization
+The training history plot shows:
+- Rapid increase in training accuracy over the first few epochs
+- More gradual improvement in validation accuracy
+- Some fluctuation in validation accuracy, indicating potential for overfitting
+
+### Word Clouds
+- **Positive Sentiment**: Prominent words include "buy", "long", "good", "stock", "call", "breakout"
+- **Negative Sentiment**: Prominent words include "short", "put", "low", "break", "drop", "bearish"
+
+These word clouds provide insights into the vocabulary associated with positive and negative sentiments in stock market discussions.
+
+## Conclusions
+- The model achieves a good accuracy of 79.38% on the test set, demonstrating its effectiveness in sentiment classification for stock market-related text.
+- There's a noticeable gap between training and validation accuracy, suggesting some overfitting. Future improvements could focus on regularization techniques.
+- The word clouds reveal intuitive associations between certain terms and sentiment polarities in stock market context.
 
 ## Model Persistence
 - The best model is saved as 'best_model.hdf5'
 - Tokenizer and Label Encoder are saved as pickle files for future use in predictions
+
+## Contributing
+
+Contributions to this project are welcome. Please fork the repository and submit a pull request with your proposed changes.
+
+## License
+
+This project is open-source and available under the MIT License.
