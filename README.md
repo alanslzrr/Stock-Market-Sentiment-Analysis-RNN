@@ -94,12 +94,6 @@ The model uses an RNN architecture with the following components:
 2. **Word Clouds**: Separate visualizations for positive and negative sentiments
 3. **Training History**: Plot of accuracy and loss over epochs
 
-## Usage
-Run the main script:
-```
-python stock_sentiment_analysis.py
-```
-This will perform data preprocessing, model training, evaluation, and generate visualizations.
 
 ## Model Persistence
 - The best model is saved as 'best_model.hdf5'
