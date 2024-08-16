@@ -25,7 +25,7 @@ stock_sentiment_analysis/
 ├── stock_sentiment_analysis.py  # Main script
 ├── requirements.txt             # Project dependencies
 ├── stock_data.csv               # Input dataset
-├── best_model.hdf5              # Saved best model (generated during training)
+├── best_model.hdf5              # Saved best model (generated during training) (Not attached due to exceeding size limit)
 ├── tokenizer.pickle             # Saved tokenizer (generated after training)
 └── encoder.pickle               # Saved label encoder (generated after training)
 ```
