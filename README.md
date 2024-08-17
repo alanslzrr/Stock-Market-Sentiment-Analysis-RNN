@@ -1,6 +1,6 @@
 # Stock Market Sentiment Analysis using RNN
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.13-orange.svg)](https://www.tensorflow.org/)
 [![Keras](https://img.shields.io/badge/Keras-2.x-red.svg)](https://keras.io/)
 [![NLTK](https://img.shields.io/badge/NLTK-3.x-green.svg)](https://www.nltk.org/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-0.24.x-orange.svg)](https://scikit-learn.org/)
@@ -11,7 +11,7 @@
 This project implements a Recurrent Neural Network (RNN) to perform sentiment analysis on stock market-related text data. The model classifies text as either positive or negative sentiment, which can be useful for financial market analysis and prediction.
 
 ## Technologies and Frameworks
-- **TensorFlow 2.x & Keras**: Core deep learning framework for building and training the RNN model.
+- **TensorFlow 2.13 & Keras**: Core deep learning framework for building and training the RNN model.
 - **NLTK 3.5+**: Used for text preprocessing, including tokenization and stop word removal.
 - **Scikit-learn 0.22+**: Utilized for data splitting, label encoding, and evaluation metrics.
 - **Pandas 1.0+ & NumPy 1.18+**: Used for data manipulation and numerical operations.
