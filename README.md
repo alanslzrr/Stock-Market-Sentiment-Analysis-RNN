@@ -10,6 +10,12 @@
 ## Project Overview
 This project implements a Recurrent Neural Network (RNN) to perform sentiment analysis on stock market-related text data. The model classifies text as either positive or negative sentiment, which can be useful for financial market analysis and prediction.
 
+## Workflow
+
+![WorkflowsStockMarketAnalysis](images/workflow.jpg)
+
+Key technical highlights include the integration of various machine learning libraries, the application of language processing techniques, and an iterative approach to model refinement. The diagram emphasizes the interconnected nature of data handling, algorithmic design, and performance tuning in developing an automated sentiment analysis solution.
+
 ## Technologies and Frameworks
 - **TensorFlow 2.13 & Keras**: Core deep learning framework for building and training the RNN model.
 - **NLTK 3.5+**: Used for text preprocessing, including tokenization and stop word removal.
