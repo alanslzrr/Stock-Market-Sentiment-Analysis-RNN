@@ -12,7 +12,7 @@ This project implements a Recurrent Neural Network (RNN) to perform sentiment an
 
 ## Workflow
 
-![WorkflowsStockMarketAnalysis](images/workflow.jpg)
+![WorkflowsStockMarketAnalysis](media/workflow.jpg)
 
 Key technical highlights include the integration of various machine learning libraries, the application of language processing techniques, and an iterative approach to model refinement. The diagram emphasizes the interconnected nature of data handling, algorithmic design, and performance tuning in developing an automated sentiment analysis solution.
 
